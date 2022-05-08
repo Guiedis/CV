@@ -3,9 +3,9 @@
 /* H E A D E R */
 /* *************************************** */
 /* +++++++++++++++++++++++++++++++++++++++ */
-.logo {
-  width: 50%;
-  height: 50%;
+.header-logo {
+  height: 6rem;
+  transform: translateY(0.5rem);
 }
 
 .header {
@@ -84,7 +84,8 @@
       rgba(181, 23, 157, 0.299),
       rgba(72, 12, 168, 0.305)
     ),
-    url(../img/gf.jpg);
+    url(../img/gf3.jpeg);
+  /* background-image: url(../img/gf3.jpeg); */
   background-size: cover;
   background-position: center;
   border-radius: 2rem;
@@ -125,8 +126,21 @@
 .skills-card {
   display: flex;
   flex-direction: column;
+  position: relative;
   background-color: #272727;
   border-radius: 2rem;
+  box-shadow: 1.2rem 2rem 2rem rgb(0 0 0 / 8%);
+  transition: all 0.3s;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.skills-card:hover {
+  background-color: rgba(39, 39, 39, 0.2);
+}
+
+.skills-card:hover > .skill-background-image {
+  opacity: 20%;
 }
 
 .skills-card-title {
@@ -136,19 +150,29 @@
   padding: 2rem 2rem;
   text-transform: uppercase;
   color: #4895ef;
+  z-index: 1;
 }
 
 .skills-card-details {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   gap: 2rem;
   list-style: none;
   font-size: 1.8rem;
   padding: 2rem 1rem;
   padding-bottom: 4rem;
+  z-index: 1;
+}
+
+.skill-background-image {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  z-index: -1;
 }
 
 /* 2nd container */
@@ -259,7 +283,7 @@
 }
 
 .country-flag-img {
-  opacity: 70%;
+  opacity: 80%;
   width: 10%;
   height: 10%;
 }
@@ -268,19 +292,34 @@
 /* EXPERIENCE */
 /* *************************************** */
 
+.timeline {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+}
+
+/* ------------ */
+
 .timeline-item {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 3.2rem;
+  align-items: flex-end;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
 }
 
 .timeline-item-date {
   font-size: 1.4rem;
   color: #4361ee;
+  text-transform: uppercase;
 }
 
 .timeline-item-work {
-  font-size: 2.4rem;
+  font-size: 3rem;
   color: #4cc9f0;
 }
 
@@ -290,9 +329,69 @@
 
 .timeline-item-business-card {
   background-color: #272727;
-  width: 35%;
+  /* width: 90%; */
   padding: 2rem;
   border-radius: 1rem;
+  text-align: right;
+}
+
+.timeline-connection {
+  border-bottom: 1px solid #fff;
+  width: 7.4rem;
+  position: absolute;
+  top: 0.8rem;
+  transform: translateX(9rem);
+}
+
+/* ------------ */
+
+.timeline-bar {
+  border-left: 1px solid #fff;
+  /* width: 50%; */
+  justify-self: center;
+  transform: translateX(1.2rem);
+}
+
+.timeline-bar-circle {
+  background: #4361ee;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  transform: translateX(-50%);
+}
+
+/*  GRID Timeline Settings  */
+/* ------------------------ */
+.timeline-left .timeline-blank {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.timeline-left .timeline-bar {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.timeline-item-left {
+  grid-column: 3;
+}
+
+/*  FLEX Timeline Settings  */
+/* ------------------------ */
+
+.timeline-left .timeline-connection {
+  width: 7.4rem;
+  position: absolute;
+  top: 0.8rem;
+  transform: translateX(-9rem);
+}
+
+.timeline-item-left {
+  align-items: flex-start;
+}
+.timeline-item-left .timeline-item-business-card {
+  text-align: left;
 }
 
 /* *************************************** */
@@ -362,13 +461,18 @@
   text-align: center;
   padding: 2rem 4rem;
   border-radius: 1rem;
-  /* rehacer K!T y agrandar los cuadros */
 }
 
 .extra-activity-img img {
   height: 100%;
+  opacity: 50%;
   filter: grayscale(100%);
-  /* opacity: 70%; */
+  transition: all 0.3s;
+}
+
+.extra-activity-img:hover > img {
+  opacity: 100%;
+  filter: none;
 }
 
 .extra-activity-title {
@@ -400,15 +504,26 @@
 }
 
 .hobbie-item-icon {
-  background-color: #4cc9f0;
+  background-color: rgba(76, 202, 240, 0.85);
+  /* opacity: 80%; */
   text-align: center;
   padding: 3rem 3rem;
   border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.hobbie-item-icon:hover {
+  transform: scale(1.2, 1.2);
+  background-color: #4cc9f0;
 }
 
 .hobbie-item-img {
   width: 6rem;
   height: 6rem;
+}
+
+.hobbie-item-description {
+  color: inherit;
 }
 
 /* *************************************** */
@@ -498,7 +613,12 @@
 } */
 
 .contact-me-img {
-  background-image: url(../img/gf4.jpeg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(181, 23, 157, 0.299),
+      rgba(72, 12, 168, 0.305)
+    ),
+    url(../img/gf.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -514,8 +634,7 @@ footer {
 }
 
 .logo-footer {
-  width: 25%;
-  height: 25%;
+  height: 4rem;
 }
 
 .container-footer {
