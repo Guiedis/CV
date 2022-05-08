@@ -1,0 +1,596 @@
+/* +++++++++++++++++++++++++++++++++++++++ */
+/* *************************************** */
+/* H E A D E R */
+/* *************************************** */
+/* +++++++++++++++++++++++++++++++++++++++ */
+.logo {
+  width: 50%;
+  height: 50%;
+}
+
+.header {
+  display: flex;
+  /* position: fixed; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 4.8rem;
+  margin-bottom: 12rem;
+}
+
+.main-nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 3rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited,
+.link-contact:link,
+.link-contact:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 1.2rem 1.6rem;
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:active,
+.main-nav-link:hover,
+.link-contact:active,
+.link-contact:hover {
+  color: #161617;
+  background-color: #fff;
+}
+
+.link-contact:link,
+.link-contact:visited {
+  color: #161617;
+  background-color: #4cc9f0;
+}
+
+.link-contact:active,
+.link-contact:hover {
+  color: #fff;
+  background-color: #b5179e;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++ */
+/* *************************************** */
+/* M A I N */
+/* *************************************** */
+/* +++++++++++++++++++++++++++++++++++++++ */
+
+/* *************************************** */
+/* ABOUT ME */
+/* *************************************** */
+
+.about-me-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  height: auto;
+  padding: 2rem;
+  background-color: #272727;
+  border-radius: 2rem;
+}
+
+.about-me-img {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(181, 23, 157, 0.299),
+      rgba(72, 12, 168, 0.305)
+    ),
+    url(../img/gf.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+}
+
+.about-me-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-me-name {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+}
+
+.about-me-txt-profession {
+  font-size: 2.4rem;
+}
+
+.link-contact-about {
+  display: inline-block;
+}
+
+/* *************************************** */
+/* SKILLS */
+/* *************************************** */
+
+.container-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 8rem;
+  margin-bottom: 6.4rem;
+}
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #272727;
+  border-radius: 2rem;
+}
+
+.skills-card-title {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 2rem 2rem;
+  text-transform: uppercase;
+  color: #4895ef;
+}
+
+.skills-card-details {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.8rem;
+  padding: 2rem 1rem;
+  padding-bottom: 4rem;
+}
+
+/* 2nd container */
+/* ----------------------------- */
+.container-secondary-skills {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+/* ----------------------------- */
+
+/* Progress Bar Secondary Skills */
+/* ----------------------------- */
+.progress-bar-container {
+  margin-bottom: 3rem;
+}
+
+.progress-bar-container:last-child {
+  margin-bottom: 0;
+}
+
+.progress-bar-container h4 {
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  width: 50rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  background-color: #272727;
+}
+
+.percentage {
+  display: block;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    #f72585,
+    #b5179e,
+    #7209b7,
+    #560bad,
+    #480ca8,
+    #3a0ca3,
+    #3f37c9,
+    #4361ee,
+    #4895ef,
+    #4cc9f0
+  );
+
+  border-radius: 5px;
+  animation: progress 1500ms ease-in 1;
+}
+
+/* background-color: rgba(
+    72,
+    150,
+    239,
+    0.6
+  ); poner un gradient con la paleta de la pagina */
+
+.p-organized {
+  width: 98%;
+}
+
+.p-detailed {
+  width: 95%;
+}
+
+.p-flexibility {
+  width: 90%;
+}
+
+.p-adaptability {
+  width: 90%;
+}
+
+.p-team-working {
+  width: 85%;
+}
+
+.p-timing {
+  width: 95%;
+}
+
+/* Animating the progress bar by initially starting from 0*/
+@keyframes progress {
+  from {
+    width: 0;
+  }
+}
+/* ----------------------------- */
+
+.language-skills-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  font-size: 2.8rem;
+}
+
+.language-skills-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4rem;
+}
+
+.country-flag-img {
+  opacity: 70%;
+  width: 10%;
+  height: 10%;
+}
+
+/* *************************************** */
+/* EXPERIENCE */
+/* *************************************** */
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timeline-item-date {
+  font-size: 1.4rem;
+  color: #4361ee;
+}
+
+.timeline-item-work {
+  font-size: 2.4rem;
+  color: #4cc9f0;
+}
+
+.timeline-item-job {
+  font-size: 2.4rem;
+}
+
+.timeline-item-business-card {
+  background-color: #272727;
+  width: 35%;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* *************************************** */
+/* EDUCATION */
+/* *************************************** */
+
+.container-education {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+}
+
+.education-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.education-icon {
+  stroke: #b5179e;
+  width: 4rem;
+}
+
+.education-card-date {
+  color: #4361ee;
+  font-size: 2rem;
+}
+
+.education-card-title {
+  font-size: 3rem;
+}
+
+.education-card-location {
+  font-style: italic;
+}
+
+/* *************************************** */
+/* EXTRA ACTIVITIES */
+/* *************************************** */
+
+.container-extra-activities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+}
+
+.extra-activities-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.extra-activity-name {
+  text-transform: uppercase;
+  color: #4cc9f0;
+  font-size: 1.8rem;
+}
+
+.extra-activity-img {
+  background-color: #272727;
+  height: 20rem;
+  text-align: center;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  /* rehacer K!T y agrandar los cuadros */
+}
+
+.extra-activity-img img {
+  height: 100%;
+  filter: grayscale(100%);
+  /* opacity: 70%; */
+}
+
+.extra-activity-title {
+  font-size: 2.4rem;
+}
+
+.extra-activity-details {
+  font-size: 1.6rem;
+}
+
+/* *************************************** */
+/* HOBBIES */
+/* *************************************** */
+
+.container-hobbies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 3.5rem;
+  column-gap: 12.8rem;
+  align-items: center;
+}
+
+.hobbie-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hobbie-item-icon {
+  background-color: #4cc9f0;
+  text-align: center;
+  padding: 3rem 3rem;
+  border-radius: 100%;
+}
+
+.hobbie-item-img {
+  width: 6rem;
+  height: 6rem;
+}
+
+/* *************************************** */
+/* CONTACT ME (CTA) */
+/* *************************************** */
+
+.container-contact-me {
+  background-color: #272727;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.contact-me-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 3.2rem 0;
+}
+
+.contact-me-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.contact-me-sign {
+  display: block;
+  width: 30%;
+  height: 10%;
+}
+
+.contact-me-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* justify-items: center; */
+  row-gap: 4rem;
+  column-gap: 8rem;
+  background-color: rgba(22, 22, 23, 0.516);
+  padding: 2.4rem 3.2rem;
+  border-radius: 1rem;
+}
+
+.contact-me-data-title {
+  color: #4361ee;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.contact-me-button:link,
+.contact-me-button:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: rgba(76, 202, 240, 0.516);
+  padding: 1.2rem;
+  width: 100%;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.contact-me-button-half:link,
+.contact-me-button-half:visited {
+  width: 49%;
+}
+
+.contact-me-button:hover,
+.contact-me-button:active {
+  background-color: #fff;
+  color: #161617;
+}
+
+.contact-me-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* .contact-me-img img {
+  width: 100%;
+  opacity: 50%;
+  /* transform: scaleX(-1); 
+} */
+
+.contact-me-img {
+  background-image: url(../img/gf4.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++ */
+/* *************************************** */
+/* F O O T E R */
+/* *************************************** */
+/* +++++++++++++++++++++++++++++++++++++++ */
+
+footer {
+  background-color: rgba(115, 9, 185, 0.25);
+}
+
+.logo-footer {
+  width: 25%;
+  height: 25%;
+}
+
+.container-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  padding: 4.8rem 0;
+}
+
+/* -------- */
+
+.footer-self-job {
+  font-size: 2.4rem;
+  margin-bottom: 3.4rem;
+}
+
+.footer-self-data-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.footer-self-data-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-self-data-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* -------- */
+
+.footer-vertical-line {
+  border-right: 1px solid #fff;
+  width: 1rem;
+  justify-self: center;
+  /* height: 100%; */
+}
+
+/* -------- */
+
+.footer-self-contact-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.footer-self-contact-title {
+  font-size: 2.8rem;
+  margin-bottom: 2.4rem;
+  text-decoration: underline;
+}
+
+.footer-self-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-self-contact-link:link,
+.footer-self-contact-link:visited {
+  text-decoration: none;
+  color: #4cc9f0;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.footer-self-contact-icon {
+  width: 2rem;
+  height: 2rem;
+}
