@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
       rel="stylesheet"
     />
+    <script defer src="js/script.js"></script>
     <title>Guido Fernández</title>
   </head>
   <body>
@@ -27,12 +28,19 @@
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Sobre&nbspMi</a></li>
-          <li><a class="main-nav-link" href="#">Skills</a></li>
-          <li><a class="main-nav-link" href="#">Experiencia</a></li>
-          <li><a class="main-nav-link" href="#">Educación</a></li>
-          <li><a class="main-nav-link" href="#">Otras&nbspActividades</a></li>
-          <li><a class="main-nav-link link-contact" href="#">Contactame</a></li>
+          <li><a class="main-nav-link" href="#about-me">Sobre&nbspMi</a></li>
+          <li><a class="main-nav-link" href="#skills">Skills</a></li>
+          <li><a class="main-nav-link" href="#experience">Experiencia</a></li>
+          <li><a class="main-nav-link" href="#education">Educación</a></li>
+          <li>
+            <a class="main-nav-link" href="#extra">Otras&nbspActividades</a>
+          </li>
+          <li><a class="main-nav-link" href="#hobbies">Hobbies</a></li>
+          <li>
+            <a class="main-nav-link link-contact" href="#contact-me"
+              >Contactame</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -40,7 +48,7 @@
     <!-- M A I N -->
     <main>
       <!-- ABOUT ME -->
-      <section class="section-about-me">
+      <section class="section-about-me" id="about-me">
         <div class="container">
           <span class="heading-section-tag">Sobre mi</span>
           <h2 class="heading-section-title">
@@ -59,7 +67,9 @@
               <p class="about-me-txt-profession">
                 Analista Programador COBOL Mainframe Sr.
               </p>
-              <a class="link-contact link-contact-about" href="#">Contactame</a>
+              <a class="link-contact link-contact-about" href="#contact-me"
+                >Contactame</a
+              >
               <p class="about-me-txt-detail">
                 Dos meses luego de egresar de la educación secundaria (2008)
                 tuve la oportunidad de ya poder empezar a emprender este
@@ -78,7 +88,7 @@
       </section>
 
       <!-- SKILLS -->
-      <section class="section-skills">
+      <section class="section-skills" id="skills">
         <div class="container">
           <span class="heading-section-tag">Skills</span>
           <h2 class="heading-section-title">
@@ -147,42 +157,42 @@
             <div class="progress-bar-container">
               <h4>Organizado</h4>
               <div class="progress-bar">
-                <span class="percentage p-organized"></span>
+                <span class="percentage" id="percentage-1"></span>
               </div>
             </div>
 
             <div class="progress-bar-container">
               <h4>Orientado al detalle</h4>
               <div class="progress-bar">
-                <span class="percentage p-detailed"></span>
+                <span class="percentage" id="percentage-2"></span>
               </div>
             </div>
 
             <div class="progress-bar-container">
               <h4>Flexibilidad para aprender</h4>
               <div class="progress-bar">
-                <span class="percentage p-flexibility"></span>
+                <span class="percentage" id="percentage-3"></span>
               </div>
             </div>
 
             <div class="progress-bar-container">
               <h4>Adaptabilidad</h4>
               <div class="progress-bar">
-                <span class="percentage p-adaptability"></span>
+                <span class="percentage" id="percentage-4"></span>
               </div>
             </div>
 
             <div class="progress-bar-container">
               <h4>Trabajo en equipo</h4>
               <div class="progress-bar">
-                <span class="percentage p-team-working"></span>
+                <span class="percentage" id="percentage-5"></span>
               </div>
             </div>
 
             <div class="progress-bar-container">
               <h4>Gestión del tiempo</h4>
               <div class="progress-bar">
-                <span class="percentage p-timing"></span>
+                <span class="percentage" id="percentage-6"></span>
               </div>
             </div>
           </div>
@@ -218,7 +228,7 @@
       </section>
 
       <!-- EXPERIENCE -->
-      <section class="section-experience">
+      <section class="section-experience" id="experience">
         <div class="container">
           <span class="heading-section-tag">Experiencia Laboral</span>
           <h2 class="heading-section-title">
@@ -227,38 +237,19 @@
         </div>
 
         <div class="container container-experience">
-          <div class="timeline timeline-right">
-            <div class="timeline-item timeline-item-right">
-              <span class="timeline-item-date">Jul 2021 &sol; Presente</span>
-              <p class="timeline-item-work">BBVA Argentina</p>
-              <p class="timeline-item-job">
-                Analista Programador COBOL Mainframe Sr
-              </p>
-              <div class="timeline-item-business-card">
-                <p>Cheques</p>
-                <p>eCheqs</p>
-                <p>Efectos (custodia y descuentos)</p>
-              </div>
-              <div class="timeline-connection"></div>
-            </div>
-            <div class="timeline-bar">
-              <div class="timeline-bar-circle"></div>
-              <div class="timeline-bar-line"></div>
-            </div>
-            <div class="timeline-blank"></div>
-          </div>
-
           <div class="timeline timeline-left">
-            <div class="timeline-item timeline-item-left">
-              <span class="timeline-item-date">Dic 2018 &sol; Jul 2021</span>
-              <p class="timeline-item-work">Santander Tecnología</p>
-              <p class="timeline-item-job">
-                Analista Programador COBOL Mainframe Sr
-              </p>
-              <div class="timeline-item-business-card">
-                <p>Préstamos Personales</p>
-                <p>Préstamos Prendarios</p>
-                <p>Préstamos Hipotecarios</p>
+            <div class="timeline-component">
+              <div class="timeline-item timeline-item-left">
+                <span class="timeline-item-date">Jul 2021 &sol; Presente</span>
+                <p class="timeline-item-work">BBVA Argentina</p>
+                <p class="timeline-item-job">
+                  Analista Programador COBOL Mainframe Sr
+                </p>
+                <div class="timeline-item-business-card">
+                  <p>Cheques</p>
+                  <p>eCheqs</p>
+                  <p>Efectos (custodia y descuentos)</p>
+                </div>
               </div>
               <div class="timeline-connection"></div>
             </div>
@@ -270,16 +261,18 @@
           </div>
 
           <div class="timeline timeline-right">
-            <div class="timeline-item timeline-item-right">
-              <span class="timeline-item-date">Abr 2017 &sol; Dic 2018</span>
-              <p class="timeline-item-work">Isban (Ecosistemas SRL)</p>
-              <p class="timeline-item-job">
-                Analista Programador COBOL Mainframe Sr
-              </p>
-              <div class="timeline-item-business-card">
-                <p>Préstamos</p>
-                <p>Resúmenes de cuenta</p>
-                <p>Plazos Fijos</p>
+            <div class="timeline-component">
+              <div class="timeline-item timeline-item-right">
+                <span class="timeline-item-date">Dic 2018 &sol; Jul 2021</span>
+                <p class="timeline-item-work">Santander Tecnología</p>
+                <p class="timeline-item-job">
+                  Analista Programador COBOL Mainframe Sr
+                </p>
+                <div class="timeline-item-business-card">
+                  <p>Préstamos Personales</p>
+                  <p>Préstamos Prendarios</p>
+                  <p>Préstamos Hipotecarios</p>
+                </div>
               </div>
               <div class="timeline-connection"></div>
             </div>
@@ -291,15 +284,18 @@
           </div>
 
           <div class="timeline timeline-left">
-            <div class="timeline-item timeline-item-left">
-              <span class="timeline-item-date">Ene 2016 &sol; Abr 2017</span>
-              <p class="timeline-item-work">Cognizant Technology Solutions</p>
-              <p class="timeline-item-job">
-                Analista Programador COBOL Mainframe Sr
-              </p>
-              <div class="timeline-item-business-card">
-                <p>Mantenimiento y Soporte</p>
-                <p>Arquitectura de aplicaciones Mainframe</p>
+            <div class="timeline-component">
+              <div class="timeline-item timeline-item-left">
+                <span class="timeline-item-date">Abr 2017 &sol; Dic 2018</span>
+                <p class="timeline-item-work">Isban (Ecosistemas SRL)</p>
+                <p class="timeline-item-job">
+                  Analista Programador COBOL Mainframe Sr
+                </p>
+                <div class="timeline-item-business-card">
+                  <p>Préstamos</p>
+                  <p>Resúmenes de cuenta</p>
+                  <p>Plazos Fijos</p>
+                </div>
               </div>
               <div class="timeline-connection"></div>
             </div>
@@ -311,16 +307,17 @@
           </div>
 
           <div class="timeline timeline-right">
-            <div class="timeline-item timeline-item-right">
-              <span class="timeline-item-date">Ago 2015 &sol; Ene 2016</span>
-              <p class="timeline-item-work">Isban (Acciona IT)</p>
-              <p class="timeline-item-job">
-                Analista Programador COBOL Mainframe Sr
-              </p>
-              <div class="timeline-item-business-card">
-                <p>Tarjetas de débito</p>
-                <p>Tarjetas de crédito</p>
-                <p>Seguimiento de piezas</p>
+            <div class="timeline-component">
+              <div class="timeline-item timeline-item-right">
+                <span class="timeline-item-date">Ene 2016 &sol; Abr 2017</span>
+                <p class="timeline-item-work">Cognizant Technology Solutions</p>
+                <p class="timeline-item-job">
+                  Analista Programador COBOL Mainframe Sr
+                </p>
+                <div class="timeline-item-business-card">
+                  <p>Mantenimiento y Soporte</p>
+                  <p>Arquitectura de aplicaciones Mainframe</p>
+                </div>
               </div>
               <div class="timeline-connection"></div>
             </div>
@@ -332,18 +329,43 @@
           </div>
 
           <div class="timeline timeline-left">
-            <div class="timeline-item timeline-item-left">
-              <span class="timeline-item-date">Feb 2009 &sol; Ene 2015</span>
-              <p class="timeline-item-work">
-                BBVA Frances (Sistemas Activos SRL)
-              </p>
-              <p class="timeline-item-job">
-                Analista Programador COBOL Mainframe
-              </p>
-              <p class="timeline-item-job">Jr &sol; Ssr &sol; Sr</p>
-              <div class="timeline-item-business-card">
-                <p>Cuentas &sol; Resúmenes</p>
-                <p>Cajas de Seguridad &sol; Paquetes</p>
+            <div class="timeline-component">
+              <div class="timeline-item timeline-item-left">
+                <span class="timeline-item-date">Ago 2015 &sol; Ene 2016</span>
+                <p class="timeline-item-work">Isban (Acciona IT)</p>
+                <p class="timeline-item-job">
+                  Analista Programador COBOL Mainframe Sr
+                </p>
+                <div class="timeline-item-business-card">
+                  <p>Tarjetas de débito</p>
+                  <p>Tarjetas de crédito</p>
+                  <p>Seguimiento de piezas</p>
+                </div>
+              </div>
+              <div class="timeline-connection"></div>
+            </div>
+            <div class="timeline-bar">
+              <div class="timeline-bar-circle"></div>
+              <div class="timeline-bar-line"></div>
+            </div>
+            <div class="timeline-blank"></div>
+          </div>
+
+          <div class="timeline timeline-right">
+            <div class="timeline-component">
+              <div class="timeline-item timeline-item-right">
+                <span class="timeline-item-date">Feb 2009 &sol; Ene 2015</span>
+                <p class="timeline-item-work">
+                  BBVA Frances (Sistemas Activos SRL)
+                </p>
+                <p class="timeline-item-job">
+                  Analista Programador COBOL Mainframe
+                </p>
+                <p class="timeline-item-job">Jr &sol; Ssr &sol; Sr</p>
+                <div class="timeline-item-business-card">
+                  <p>Cuentas &sol; Resúmenes</p>
+                  <p>Cajas de Seguridad &sol; Paquetes</p>
+                </div>
               </div>
               <div class="timeline-connection"></div>
             </div>
@@ -357,7 +379,7 @@
       </section>
 
       <!-- EDUCATION -->
-      <section class="section-education">
+      <section class="section-education" id="education">
         <div class="container">
           <span class="heading-section-tag">Educación Formal</span>
           <h2 class="heading-section-title">Nobleza Obliga</h2>
@@ -433,7 +455,7 @@
       </section>
 
       <!-- EXTRA ACTIVITIES -->
-      <section class="section-extra-activities">
+      <section class="section-extra-activities" id="extra">
         <div class="container">
           <span class="heading-section-tag">Otras Actividades</span>
           <h2 class="heading-section-title">
@@ -486,7 +508,7 @@
       </section>
 
       <!-- HOBBIES -->
-      <section class="section-hobbies">
+      <section class="section-hobbies" id="hobbies">
         <div class="container">
           <span class="heading-section-tag">Hobbies</span>
           <h2 class="heading-section-title">
@@ -580,7 +602,7 @@
       </section>
 
       <!-- CONTACT ME -->
-      <section class="section-contact-me">
+      <section class="section-contact-me" id="contact-me">
         <div class="container">
           <span class="heading-section-tag">Contactame</span>
           <h2 class="heading-section-title">

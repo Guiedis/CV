@@ -55,6 +55,7 @@
 html {
   /* size user settings / default size = x = percentage of user's browser font-size setting */
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -66,7 +67,7 @@ body {
 }
 
 section {
-  margin-bottom: 16rem;
+  padding: 9.6rem 0;
 }
 
 p {
