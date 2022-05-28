@@ -143,9 +143,9 @@
     column-gap: 4rem;
   }
 
-  .hobbie-item-icon {
-    background-color: rgba(76, 202, 240, 0.9);
-  }
+  /* .hobbie-item-icon {
+    background-color: rgba(76, 202, 240, 0.6);
+  } */
 
   .contact-me-card {
     grid-template-columns: 1fr;
