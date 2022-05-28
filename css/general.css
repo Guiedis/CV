@@ -56,6 +56,7 @@ html {
   /* size user settings / default size = x = percentage of user's browser font-size setting */
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -64,6 +65,7 @@ body {
   /* font-weight: 400; */
   color: #fff;
   background-color: #161617;
+  overflow-x: hidden;
 }
 
 section {
@@ -83,6 +85,7 @@ p {
 .container {
   max-width: 120rem;
   margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 .container-sub {
