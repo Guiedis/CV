@@ -106,6 +106,12 @@
   .main-nav-link:link,
   .main-nav-link:visited {
     font-size: 3rem;
+    color: white;
+  }
+
+  .main-nav-link:hover,
+  .main-nav-link:active {
+    color: black;
   }
 
   /* ----------------------------------------- */
