@@ -60,12 +60,16 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1;
   /* font-weight: 400; */
   color: #fff;
   background-color: #161617;
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 
 section {
@@ -75,7 +79,7 @@ section {
 p {
   font-size: 1.8rem;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 /* *************************** */
@@ -102,6 +106,7 @@ p {
 }
 
 .heading-section-title {
+  font-family: "Nunito Sans", sans-serif;
   font-size: 3.6rem;
   letter-spacing: 0.05rem;
   margin-bottom: 4rem;
