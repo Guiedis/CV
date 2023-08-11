@@ -9,7 +9,7 @@
 } */
 
 .logo-typography {
-  font-family: "Bad Script", cursive;
+  font-family: 'Bad Script', cursive;
   font-size: 3rem;
   color: #4ccaf0c8;
 }
@@ -107,7 +107,7 @@
   color: #4361ee;
 }
 
-.icon-mobile-nav[name="close-outline"] {
+.icon-mobile-nav[name='close-outline'] {
   display: none;
 }
 
@@ -148,7 +148,7 @@
       rgba(181, 23, 157, 0.256),
       rgba(39, 84, 120, 0.292)
     ),
-    url(../img/gf5.jpg);
+    url(../img/gf5.webp);
   background-size: cover;
   background-position: center;
   border-radius: 2rem;
@@ -729,7 +729,7 @@
       rgba(39, 84, 120, 0.292),
       rgba(181, 23, 157, 0.299)
     ),
-    url(../img/gf6.jpg);
+    url(../img/gf6.webp);
   background-size: cover;
   background-position: center;
 }
